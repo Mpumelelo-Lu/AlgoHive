@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Mini Trading Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script defer src="JS/app.js"></script>
+  <link rel ="stylesheet" href="Css/Styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Trading Dashboard</h1>
+  </header>
+  <main>
+    <section id="chart-card">
+      <canvas id="equity-canvas" width="900" height="300"></canvas>
+    </section>
+    <section id="form-card">
+      <label for="symbol">Symbol</label>
+      <select id="symbol">
+        <option>AAPL</option>
+        <option>MSFT</option>
+        <option>TSLA</option>
+        <option>EURUSD</option>
+        <option>XAUUSD</option>
+      </select>
+      <label>PnL</label>
+      <input id="pnl" type="number" step="0.01" placeholder="e.g. 250 "/>
+      <button id="add-trade">Add Trade</button>
+      <div id="form-msg"></div>
+    </section>
+    <section id="table-card">
+      <table id="trades-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Symbol</th>
+            <th>PnL</th>
+            <th>Equity</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

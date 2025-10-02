@@ -1,0 +1,32 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+margin: 24px; color:#2b468b; }
+header { margin-bottom: 16px; }
+#chart-card, #form-card, #table-card { background:#fff; border:1px solid 
+#e2e8f0; padding:16px; border-radius:12px; margin-bottom:16px; }
+label { display:block; margin:8px 0 4px; }
+input, select, button { padding:8px; border:1px solid #cbd5e1; border-radius:8px; }
+button { cursor:pointer; }
+table { width:100%; border-collapse: collapse; }
+th, td { border-bottom:1px solid #e2e8f0; padding:8px; text-align:left; }
+#form-msg { margin-top:8px; color:#b91c1c; }
+button { 
+  width: 30%;
+  padding: 14px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #2b468b 0%, #284182 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 250;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
