@@ -43,4 +43,3 @@ Table refreshes to show the new trade.
 
 Equity series is recomputed and the curve redraws instantly.
 
-🖼 Screenshot
