@@ -30,3 +30,124 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
+
+/* Add a container for main content for better control */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Make cards stack and stretch on mobile */
+#chart-card, #form-card, #table-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive table: allow horizontal scroll on small screens */
+@media (max-width: 900px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  th, td {
+    min-width: 90px;
+  }
+}
+
+/* Stack form fields vertically and stretch inputs/buttons */
+#form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#form-card label,
+#form-card input,
+#form-card select,
+#form-card button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make canvas responsive */
+#equity-canvas {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  min-height: 180px;
+  display: block;
+}
+
+/* Adjust padding and font sizes for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding: 8px;
+  }
+  header h1 {
+    font-size: 1.25rem;
+  }
+  main {
+    padding: 0;
+    gap: 12px;
+  }
+  #chart-card, #form-card, #table-card {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 0.95rem;
+  }
+  input, select, button {
+    font-size: 1rem;
+  }
+  th, td {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+  #chart-card, #form-card, #table-card {
+    padding: 6px;
+    border-radius: 6px;
+  }
+  th, td {
+    padding: 6px 2px;
+    font-size: 0.85rem;
+  }
+  button {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    max-width: 900px;
+  }
+}
+
+/* Desktop large */
+@media (min-width: 1400px) {
+  body {
+    padding: 40px;
+  }
+
+  main {
+    max-width: 1400px;
+  }
+
+  #chart-card, #form-card, #table-card {
+    padding: 32px;
+  }
+}
